@@ -1,0 +1,9 @@
+@NSXManager = 192.168.172.104
+@NSXUsername = admin
+@NSXPassword = VMware1!VMware1!
+
+PATCH https://{{NSXManager}}/policy/api/v1/infra
+Authorization: Basic {{NSXUsername}} {{NSXPassword}}
+Content-Type: application/json
+
+< ./ISNS2315D.json

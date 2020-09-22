@@ -1,0 +1,1557 @@
+{
+    "resource_type": "Infra",
+    "id": "infra",
+    "display_name": "infra",
+    "path": "/infra",
+    "children": [
+        {
+            "resource_type": "ChildResourceReference",
+            "id": "default",
+            "target_type": "Domain",
+            "children": [
+                {
+                    "Group": {
+                        "expression": [
+                            {
+                                "member_type": "VirtualMachine",
+                                "key": "Tag",
+                                "operator": "EQUALS",
+                                "value": "framework/environment|Production",
+                                "resource_type": "Condition",
+                                "marked_for_delete": false
+                            }
+                        ],
+                        "extended_expression": [],
+                        "reference": false,
+                        "resource_type": "Group",
+                        "id": "Env---Production",
+                        "display_name": "Env---Production",
+                        "children": [],
+                        "marked_for_delete": false
+                    },
+                    "resource_type": "ChildGroup",
+                    "marked_for_delete": false
+                },
+                {
+                    "Group": {
+                        "expression": [
+                            {
+                                "member_type": "VirtualMachine",
+                                "key": "Tag",
+                                "operator": "EQUALS",
+                                "value": "framework/environment|Non-Prod",
+                                "resource_type": "Condition",
+                                "marked_for_delete": false
+                            }
+                        ],
+                        "extended_expression": [],
+                        "reference": false,
+                        "resource_type": "Group",
+                        "id": "Env---NonProd",
+                        "display_name": "Env---NonProd",
+                        "children": []
+                    },
+                    "resource_type": "ChildGroup",
+                    "marked_for_delete": false
+                },
+                {
+                    "Group": {
+                        "expression": [
+                            {
+                                "member_type": "VirtualMachine",
+                                "key": "Tag",
+                                "operator": "EQUALS",
+                                "value": "framework/environment|Build",
+                                "resource_type": "Condition",
+                                "marked_for_delete": false
+                            }
+                        ],
+                        "extended_expression": [],
+                        "reference": false,
+                        "resource_type": "Group",
+                        "id": "Env---Build",
+                        "display_name": "Env---Build"
+                    },
+                    "resource_type": "ChildGroup",
+                    "marked_for_delete": false
+                },
+                {
+                    "Group": {
+                        "expression": [
+                            {
+                                "member_type": "VirtualMachine",
+                                "key": "Tag",
+                                "operator": "EQUALS",
+                                "value": "framework/security|NotSoSecret",
+                                "resource_type": "Condition",
+                                "marked_for_delete": false
+                            }
+                        ],
+                        "extended_expression": [],
+                        "reference": false,
+                        "resource_type": "Group",
+                        "id": "Sec---NotSoSecret",
+                        "display_name": "Sec---NotSoSecret"
+                    },
+                    "resource_type": "ChildGroup",
+                    "marked_for_delete": false
+                },
+                {
+                    "Group": {
+                        "expression": [
+                            {
+                                "member_type": "VirtualMachine",
+                                "key": "Tag",
+                                "operator": "EQUALS",
+                                "value": "framework/security|Secret",
+                                "resource_type": "Condition",
+                                "marked_for_delete": false
+                            }
+                        ],
+                        "extended_expression": [],
+                        "reference": false,
+                        "resource_type": "Group",
+                        "id": "Sec---Secret",
+                        "display_name": "Sec---Secret"
+                    },
+                    "resource_type": "ChildGroup",
+                    "marked_for_delete": false
+                },
+                {
+                    "Group": {
+                        "expression": [
+                            {
+                                "member_type": "VirtualMachine",
+                                "key": "Tag",
+                                "operator": "EQUALS",
+                                "value": "framework/security|TopSecret",
+                                "resource_type": "Condition",
+                                "marked_for_delete": false
+                            }
+                        ],
+                        "extended_expression": [],
+                        "reference": false,
+                        "resource_type": "Group",
+                        "id": "Sec---TopSecret",
+                        "display_name": "Sec---TopSecret"
+                    },
+                    "resource_type": "ChildGroup",
+                    "marked_for_delete": false
+                },
+                {
+                    "Group": {
+                        "expression": [],
+                        "extended_expression": [],
+                        "reference": false,
+                        "resource_type": "Group",
+                        "id": "Inf---ActiveDirectory",
+                        "display_name": "Inf---ActiveDirectory"
+                    },
+                    "resource_type": "ChildGroup",
+                    "marked_for_delete": false
+                },
+                {
+                    "Group": {
+                        "expression": [],
+                        "extended_expression": [],
+                        "reference": false,
+                        "resource_type": "Group",
+                        "id": "Inf---AntiVirus",
+                        "display_name": "Inf---AntiVirus"
+                    },
+                    "resource_type": "ChildGroup",
+                    "marked_for_delete": false
+                },
+                {
+                    "Group": {
+                        "expression": [],
+                        "extended_expression": [],
+                        "reference": false,
+                        "resource_type": "Group",
+                        "id": "Inf---Backup",
+                        "display_name": "Inf---Backup"
+                    },
+                    "resource_type": "ChildGroup",
+                    "marked_for_delete": false
+                },
+                {
+                    "Group": {
+                        "expression": [],
+                        "extended_expression": [],
+                        "reference": false,
+                        "resource_type": "Group",
+                        "id": "Inf---CMP",
+                        "display_name": "Inf---CMP"
+                    },
+                    "resource_type": "ChildGroup",
+                    "marked_for_delete": false
+                },
+                {
+                    "Group": {
+                        "expression": [],
+                        "extended_expression": [],
+                        "reference": false,
+                        "resource_type": "Group",
+                        "id": "Inf---ConfigMgmt",
+                        "display_name": "Inf---ConfigMgmt"
+                    },
+                    "resource_type": "ChildGroup",
+                    "marked_for_delete": false
+                },
+                {
+                    "Group": {
+                        "expression": [],
+                        "extended_expression": [],
+                        "reference": false,
+                        "resource_type": "Group",
+                        "id": "Inf---DNS",
+                        "display_name": "Inf---DNS"
+                    },
+                    "resource_type": "ChildGroup",
+                    "marked_for_delete": false
+                },
+                {
+                    "Group": {
+                        "expression": [],
+                        "extended_expression": [],
+                        "reference": false,
+                        "resource_type": "Group",
+                        "id": "Inf---EntMsgBus",
+                        "display_name": "Inf---EntMsgBus"
+                    },
+                    "resource_type": "ChildGroup",
+                    "marked_for_delete": false
+                },
+                {
+                    "Group": {
+                        "expression": [],
+                        "extended_expression": [],
+                        "reference": false,
+                        "resource_type": "Group",
+                        "id": "Inf---JumpHosts",
+                        "display_name": "Inf---JumpHosts"
+                    },
+                    "resource_type": "ChildGroup",
+                    "marked_for_delete": false
+                },
+                {
+                    "Group": {
+                        "expression": [],
+                        "extended_expression": [],
+                        "reference": false,
+                        "resource_type": "Group",
+                        "id": "Inf---Monitoring",
+                        "display_name": "Inf---Monitoring"
+                    },
+                    "resource_type": "ChildGroup",
+                    "marked_for_delete": false
+                },
+                {
+                    "Group": {
+                        "expression": [],
+                        "extended_expression": [],
+                        "reference": false,
+                        "resource_type": "Group",
+                        "id": "Inf---NTP",
+                        "display_name": "Inf---NTP"
+                    },
+                    "resource_type": "ChildGroup",
+                    "marked_for_delete": false
+                },
+                {
+                    "Group": {
+                        "expression": [],
+                        "extended_expression": [],
+                        "reference": false,
+                        "resource_type": "Group",
+                        "id": "Inf---Proxy",
+                        "display_name": "Inf---Proxy"
+                    },
+                    "resource_type": "ChildGroup",
+                    "marked_for_delete": false
+                },
+                {
+                    "Group": {
+                        "expression": [],
+                        "extended_expression": [],
+                        "reference": false,
+                        "resource_type": "Group",
+                        "id": "Inf---SIEM",
+                        "display_name": "Inf---SIEM"
+                    },
+                    "resource_type": "ChildGroup",
+                    "marked_for_delete": false
+                },
+                {
+                    "Group": {
+                        "expression": [],
+                        "extended_expression": [],
+                        "reference": false,
+                        "resource_type": "Group",
+                        "id": "Inf---SMTPRelay",
+                        "display_name": "Inf---SMTPRelay"
+                    },
+                    "resource_type": "ChildGroup",
+                    "marked_for_delete": false
+                },
+                {
+                    "Group": {
+                        "expression": [],
+                        "extended_expression": [],
+                        "reference": false,
+                        "resource_type": "Group",
+                        "id": "Inf---Syslog",
+                        "display_name": "Inf---Syslog"
+                    },
+                    "resource_type": "ChildGroup",
+                    "marked_for_delete": false
+                },
+                {
+                    "Group": {
+                        "expression": [
+                            {
+                                "member_type": "VirtualMachine",
+                                "key": "Tag",
+                                "operator": "EQUALS",
+                                "value": "framework/platform|Batphone",
+                                "resource_type": "Condition"
+                            }
+                        ],
+                        "extended_expression": [],
+                        "reference": false,
+                        "resource_type": "Group",
+                        "id": "APP---Batphone",
+                        "display_name": "APP---Batphone"
+                    },
+                    "resource_type": "ChildGroup",
+                    "marked_for_delete": false
+                },
+                {
+                    "Group": {
+                        "expression": [
+                            {
+                                "member_type": "VirtualMachine",
+                                "key": "Tag",
+                                "operator": "EQUALS",
+                                "value": "framework/platform|SpyMaster",
+                                "resource_type": "Condition"
+                            }
+                        ],
+                        "extended_expression": [],
+                        "reference": false,
+                        "resource_type": "Group",
+                        "id": "APP---SpyMaster",
+                        "display_name": "APP---SpyMaster"
+                    },
+                    "resource_type": "ChildGroup",
+                    "marked_for_delete": false
+                },
+                {
+                    "Group": {
+                        "expression": [
+                            {
+                                "member_type": "VirtualMachine",
+                                "key": "Tag",
+                                "operator": "EQUALS",
+                                "value": "framework/platform|YADFWMC",
+                                "resource_type": "Condition"
+                            }
+                        ],
+                        "extended_expression": [],
+                        "reference": false,
+                        "resource_type": "Group",
+                        "id": "APP---YADFWMC",
+                        "display_name": "APP---YADFWMC"
+                    },
+                    "resource_type": "ChildGroup",
+                    "marked_for_delete": false
+                },
+                {
+                    "Group": {
+                        "expression": [
+                            {
+                                "expressions": [
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "framework/environment|Production",
+                                        "resource_type": "Condition"
+                                    },
+                                    {
+                                        "conjunction_operator": "AND",
+                                        "resource_type": "ConjunctionOperator"
+                                    },
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "framework/security|NotSoSecret",
+                                        "resource_type": "Condition"
+                                    },
+                                    {
+                                        "conjunction_operator": "AND",
+                                        "resource_type": "ConjunctionOperator"
+                                    },
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "framework/platform|SpyMaster",
+                                        "resource_type": "Condition"
+                                    }
+                                ],
+                                "resource_type": "NestedExpression"
+                            }
+                        ],
+                        "extended_expression": [],
+                        "reference": false,
+                        "resource_type": "Group",
+                        "id": "prod_NSS_SpyMaster",
+                        "display_name": "prod.NSS.SpyMaster"
+                    },
+                    "resource_type": "ChildGroup",
+                    "marked_for_delete": false
+                },
+                {
+                    "Group": {
+                        "expression": [
+                            {
+                                "expressions": [
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "framework/environment|Production",
+                                        "resource_type": "Condition"
+                                    },
+                                    {
+                                        "conjunction_operator": "AND",
+                                        "resource_type": "ConjunctionOperator"
+                                    },
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "framework/security|NotSoSecret",
+                                        "resource_type": "Condition"
+                                    },
+                                    {
+                                        "conjunction_operator": "AND",
+                                        "resource_type": "ConjunctionOperator"
+                                    },
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "framework/platform|SpyMaster",
+                                        "resource_type": "Condition"
+                                    },
+                                    {
+                                        "conjunction_operator": "AND",
+                                        "resource_type": "ConjunctionOperator"
+                                    },
+                                    {
+                                        "member_type": "VirtualMachine",
+                                        "key": "Tag",
+                                        "operator": "EQUALS",
+                                        "value": "framework/function|Web",
+                                        "resource_type": "Condition"
+                                    }
+                                ],
+                                "resource_type": "NestedExpression"
+                            }
+                        ],
+                        "extended_expression": [],
+                        "reference": false,
+                        "resource_type": "Group",
+                        "id": "prod_NSS_SpyMaster.Web",
+                        "display_name": "prod.NSS.SpyMaster.Web"
+                    },
+                    "resource_type": "ChildGroup",
+                    "marked_for_delete": false
+                },
+                {
+                    "SecurityPolicy": {
+                        "rules": [],
+                        "resource_type": "SecurityPolicy",
+                        "id": "Remote_Access",
+                        "display_name": "Remote Access",
+                        "overridden": false,
+                        "sequence_number": 10,
+                        "internal_sequence_number": 1000010,
+                        "category": "Infrastructure",
+                        "stateful": true,
+                        "tcp_strict": true,
+                        "locked": false,
+                        "lock_modified_time": 0,
+                        "scope": [
+                            "ANY"
+                        ],
+                        "is_default": false
+                    },
+                    "resource_type": "ChildSecurityPolicy",
+                    "marked_for_delete": false
+                },
+                {
+                    "SecurityPolicy": {
+                        "children": [
+                            {
+                                "Rule": {
+                                    "action": "ALLOW",
+                                    "resource_type": "Rule",
+                                    "id": "allow-dns-access",
+                                    "display_name": "DNS",
+                                    "children": [],
+                                    "sequence_number": 10,
+                                    "sources_excluded": false,
+                                    "destinations_excluded": false,
+                                    "source_groups": [
+                                        "/infra/domains/default/groups/Env---Production",
+                                        "/infra/domains/default/groups/Env---NonProd",
+                                        "/infra/domains/default/groups/Env---Build"
+                                    ],
+                                    "destination_groups": [
+                                        "/infra/domains/default/groups/Inf---DNS"
+                                    ],
+                                    "services": [
+                                        "/infra/services/DNS-UDP",
+                                        "/infra/services/DNS"
+                                    ],
+                                    "profiles": [
+                                        "ANY"
+                                    ],
+                                    "logged": false,
+                                    "scope": [
+                                        "/infra/domains/default/groups/Env---Production",
+                                        "/infra/domains/default/groups/Env---NonProd",
+                                        "/infra/domains/default/groups/Env---Build",
+                                        "/infra/domains/default/groups/Inf---DNS"
+                                    ],
+                                    "disabled": false,
+                                    "notes": "",
+                                    "direction": "IN_OUT",
+                                    "tag": "",
+                                    "ip_protocol": "IPV4_IPV6",
+                                    "is_default": false
+                                },
+                                "resource_type": "ChildRule",
+                                "marked_for_delete": false
+                            },
+                            {
+                                "Rule": {
+                                    "action": "ALLOW",
+                                    "resource_type": "Rule",
+                                    "id": "allow-ntp-access",
+                                    "display_name": "NTP",
+                                    "children": [],
+                                    "sequence_number": 20,
+                                    "sources_excluded": false,
+                                    "destinations_excluded": false,
+                                    "source_groups": [
+                                        "/infra/domains/default/groups/Env---Production",
+                                        "/infra/domains/default/groups/Env---NonProd",
+                                        "/infra/domains/default/groups/Env---Build"
+                                    ],
+                                    "destination_groups": [
+                                        "/infra/domains/default/groups/Inf---NTP"
+                                    ],
+                                    "services": [
+                                        "/infra/services/NTP_Time_Server"
+                                    ],
+                                    "profiles": [
+                                        "ANY"
+                                    ],
+                                    "logged": false,
+                                    "scope": [
+                                        "/infra/domains/default/groups/Env---Production",
+                                        "/infra/domains/default/groups/Env---NonProd",
+                                        "/infra/domains/default/groups/Env---Build",
+                                        "/infra/domains/default/groups/Inf---NTP"
+                                    ],
+                                    "disabled": false,
+                                    "notes": "",
+                                    "direction": "IN_OUT",
+                                    "tag": "",
+                                    "ip_protocol": "IPV4_IPV6",
+                                    "is_default": false
+                                },
+                                "resource_type": "ChildRule",
+                                "marked_for_delete": false
+                            }
+                        ],
+                        "resource_type": "SecurityPolicy",
+                        "id": "Food_and_Water",
+                        "display_name": "Food and Water",
+                        "overridden": false,
+                        "sequence_number": 20,
+                        "internal_sequence_number": 1000020,
+                        "category": "Infrastructure",
+                        "stateful": true,
+                        "tcp_strict": true,
+                        "locked": false,
+                        "lock_modified_time": 0,
+                        "scope": [
+                            "ANY"
+                        ],
+                        "is_default": false
+                    },
+                    "resource_type": "ChildSecurityPolicy",
+                    "marked_for_delete": false
+                },
+                {
+                    "SecurityPolicy": {
+                        "rules": [],
+                        "resource_type": "SecurityPolicy",
+                        "id": "Active_Directory",
+                        "display_name": "Active Directory",
+                        "overridden": false,
+                        "sequence_number": 30,
+                        "internal_sequence_number": 1000030,
+                        "category": "Infrastructure",
+                        "stateful": true,
+                        "tcp_strict": true,
+                        "locked": false,
+                        "lock_modified_time": 0,
+                        "scope": [
+                            "ANY"
+                        ],
+                        "is_default": false
+                    },
+                    "resource_type": "ChildSecurityPolicy",
+                    "marked_for_delete": false
+                },
+                {
+                    "SecurityPolicy": {
+                        "rules": [],
+                        "resource_type": "SecurityPolicy",
+                        "id": "Authentication",
+                        "display_name": "Authentication",
+                        "overridden": false,
+                        "sequence_number": 40,
+                        "internal_sequence_number": 1000040,
+                        "category": "Infrastructure",
+                        "stateful": true,
+                        "tcp_strict": true,
+                        "locked": false,
+                        "lock_modified_time": 0,
+                        "scope": [
+                            "ANY"
+                        ],
+                        "is_default": false
+                    },
+                    "resource_type": "ChildSecurityPolicy",
+                    "marked_for_delete": false
+                },
+                {
+                    "SecurityPolicy": {
+                        "rules": [],
+                        "resource_type": "SecurityPolicy",
+                        "id": "Monitoring",
+                        "display_name": "Monitoring",
+                        "overridden": false,
+                        "sequence_number": 50,
+                        "internal_sequence_number": 1000050,
+                        "category": "Infrastructure",
+                        "stateful": true,
+                        "tcp_strict": true,
+                        "locked": false,
+                        "lock_modified_time": 0,
+                        "scope": [
+                            "ANY"
+                        ],
+                        "is_default": false
+                    },
+                    "resource_type": "ChildSecurityPolicy",
+                    "marked_for_delete": false
+                },
+                {
+                    "SecurityPolicy": {
+                        "rules": [],
+                        "resource_type": "SecurityPolicy",
+                        "id": "Logging",
+                        "display_name": "Logging",
+                        "overridden": false,
+                        "sequence_number": 60,
+                        "internal_sequence_number": 1000060,
+                        "category": "Infrastructure",
+                        "stateful": true,
+                        "tcp_strict": true,
+                        "locked": false,
+                        "lock_modified_time": 0,
+                        "scope": [
+                            "ANY"
+                        ],
+                        "is_default": false
+                    },
+                    "resource_type": "ChildSecurityPolicy",
+                    "marked_for_delete": false
+                },
+                {
+                    "SecurityPolicy": {
+                        "rules": [],
+                        "resource_type": "SecurityPolicy",
+                        "id": "override_environment",
+                        "display_name": "Override - Environment",
+                        "overridden": false,
+                        "sequence_number": 110,
+                        "internal_sequence_number": 1000110,
+                        "category": "Environment",
+                        "stateful": true,
+                        "tcp_strict": true,
+                        "locked": false,
+                        "lock_modified_time": 0,
+                        "scope": [
+                            "ANY"
+                        ],
+                        "is_default": false
+                    },
+                    "resource_type": "ChildSecurityPolicy",
+                    "marked_for_delete": false
+                },
+                {
+                    "SecurityPolicy": {
+                        "children": [
+                            {
+                                "Rule": {
+                                    "action": "DROP",
+                                    "resource_type": "Rule",
+                                    "id": "guardrail-env-in-production",
+                                    "display_name": "IN - Production",
+                                    "children": [],
+                                    "sequence_number": 10,
+                                    "sources_excluded": true,
+                                    "destinations_excluded": false,
+                                    "source_groups": [
+                                        "/infra/domains/default/groups/Env---Production"
+                                    ],
+                                    "destination_groups": [
+                                        "/infra/domains/default/groups/Env---Production"
+                                    ],
+                                    "services": [
+                                        "ANY"
+                                    ],
+                                    "profiles": [
+                                        "ANY"
+                                    ],
+                                    "logged": false,
+                                    "scope": [
+                                        "/infra/domains/default/groups/Env---Production"
+                                    ],
+                                    "disabled": false,
+                                    "notes": "",
+                                    "direction": "IN",
+                                    "tag": "",
+                                    "ip_protocol": "IPV4_IPV6",
+                                    "is_default": false
+                                },
+                                "resource_type": "ChildRule",
+                                "marked_for_delete": false
+                            },
+                            {
+                                "Rule": {
+                                    "action": "DROP",
+                                    "resource_type": "Rule",
+                                    "id": "guardrail-env-in-nonprod",
+                                    "display_name": "IN - NonProd",
+                                    "children": [],
+                                    "sequence_number": 20,
+                                    "sources_excluded": true,
+                                    "destinations_excluded": false,
+                                    "source_groups": [
+                                        "/infra/domains/default/groups/Env---NonProd"
+                                    ],
+                                    "destination_groups": [
+                                        "/infra/domains/default/groups/Env---NonProd"
+                                    ],
+                                    "services": [
+                                        "ANY"
+                                    ],
+                                    "profiles": [
+                                        "ANY"
+                                    ],
+                                    "logged": false,
+                                    "scope": [
+                                        "/infra/domains/default/groups/Env---NonProd"
+                                    ],
+                                    "disabled": false,
+                                    "notes": "",
+                                    "direction": "IN",
+                                    "tag": "",
+                                    "ip_protocol": "IPV4_IPV6",
+                                    "is_default": false
+                                },
+                                "resource_type": "ChildRule",
+                                "marked_for_delete": false
+                            },
+                            {
+                                "Rule": {
+                                    "action": "DROP",
+                                    "resource_type": "Rule",
+                                    "id": "guardrail-env-in-build",
+                                    "display_name": "IN - Build",
+                                    "children": [],
+                                    "sequence_number": 30,
+                                    "sources_excluded": true,
+                                    "destinations_excluded": false,
+                                    "source_groups": [
+                                        "/infra/domains/default/groups/Env---Build"
+                                    ],
+                                    "destination_groups": [
+                                        "/infra/domains/default/groups/Env---Build"
+                                    ],
+                                    "services": [
+                                        "ANY"
+                                    ],
+                                    "profiles": [
+                                        "ANY"
+                                    ],
+                                    "logged": false,
+                                    "scope": [
+                                        "/infra/domains/default/groups/Env---Build"
+                                    ],
+                                    "disabled": false,
+                                    "notes": "",
+                                    "direction": "IN",
+                                    "tag": "",
+                                    "ip_protocol": "IPV4_IPV6",
+                                    "is_default": false
+                                },
+                                "resource_type": "ChildRule",
+                                "marked_for_delete": false
+                            }
+                        ],
+                        "resource_type": "SecurityPolicy",
+                        "id": "guardrails_in_environment",
+                        "display_name": "Guardrails - IN - Environment",
+                        "overridden": false,
+                        "sequence_number": 120,
+                        "internal_sequence_number": 1000120,
+                        "category": "Environment",
+                        "stateful": true,
+                        "tcp_strict": true,
+                        "locked": false,
+                        "lock_modified_time": 0,
+                        "scope": [
+                            "ANY"
+                        ],
+                        "is_default": false
+                    },
+                    "resource_type": "ChildSecurityPolicy",
+                    "marked_for_delete": false
+                },
+                {
+                    "SecurityPolicy": {
+                        "children": [
+                            {
+                                "Rule": {
+                                    "action": "DROP",
+                                    "resource_type": "Rule",
+                                    "id": "guardrail-env-out-production",
+                                    "display_name": "OUT - Production",
+                                    "children": [],
+                                    "sequence_number": 10,
+                                    "sources_excluded": false,
+                                    "destinations_excluded": true,
+                                    "source_groups": [
+                                        "/infra/domains/default/groups/Env---Production"
+                                    ],
+                                    "destination_groups": [
+                                        "/infra/domains/default/groups/Env---Production"
+                                    ],
+                                    "services": [
+                                        "ANY"
+                                    ],
+                                    "profiles": [
+                                        "ANY"
+                                    ],
+                                    "logged": false,
+                                    "scope": [
+                                        "/infra/domains/default/groups/Env---Production"
+                                    ],
+                                    "disabled": false,
+                                    "notes": "",
+                                    "direction": "OUT",
+                                    "tag": "",
+                                    "ip_protocol": "IPV4_IPV6",
+                                    "is_default": false
+                                },
+                                "resource_type": "ChildRule",
+                                "marked_for_delete": false
+                            },
+                            {
+                                "Rule": {
+                                    "action": "DROP",
+                                    "resource_type": "Rule",
+                                    "id": "guardrail-env-out-nonprod",
+                                    "display_name": "OUT - NonProd",
+                                    "children": [],
+                                    "sequence_number": 20,
+                                    "sources_excluded": false,
+                                    "destinations_excluded": true,
+                                    "source_groups": [
+                                        "/infra/domains/default/groups/Env---NonProd"
+                                    ],
+                                    "destination_groups": [
+                                        "/infra/domains/default/groups/Env---NonProd"
+                                    ],
+                                    "services": [
+                                        "ANY"
+                                    ],
+                                    "profiles": [
+                                        "ANY"
+                                    ],
+                                    "logged": false,
+                                    "scope": [
+                                        "/infra/domains/default/groups/Env---NonProd"
+                                    ],
+                                    "disabled": false,
+                                    "notes": "",
+                                    "direction": "OUT",
+                                    "tag": "",
+                                    "ip_protocol": "IPV4_IPV6",
+                                    "is_default": false
+                                },
+                                "resource_type": "ChildRule",
+                                "marked_for_delete": false
+                            },
+                            {
+                                "Rule": {
+                                    "action": "DROP",
+                                    "resource_type": "Rule",
+                                    "id": "guardrail-env-out-build",
+                                    "display_name": "OUT - Build",
+                                    "children": [],
+                                    "sequence_number": 30,
+                                    "sources_excluded": false,
+                                    "destinations_excluded": true,
+                                    "source_groups": [
+                                        "/infra/domains/default/groups/Env---Build"
+                                    ],
+                                    "destination_groups": [
+                                        "/infra/domains/default/groups/Env---Build"
+                                    ],
+                                    "services": [
+                                        "ANY"
+                                    ],
+                                    "profiles": [
+                                        "ANY"
+                                    ],
+                                    "logged": false,
+                                    "scope": [
+                                        "/infra/domains/default/groups/Env---Build"
+                                    ],
+                                    "disabled": false,
+                                    "notes": "",
+                                    "direction": "OUT",
+                                    "tag": "",
+                                    "ip_protocol": "IPV4_IPV6",
+                                    "is_default": false
+                                },
+                                "resource_type": "ChildRule",
+                                "marked_for_delete": false
+                            }
+                        ],
+                        "resource_type": "SecurityPolicy",
+                        "id": "guardrails_out_environment",
+                        "display_name": "Guardrails - OUT - Environment",
+                        "overridden": false,
+                        "sequence_number": 130,
+                        "internal_sequence_number": 1000130,
+                        "category": "Environment",
+                        "stateful": true,
+                        "tcp_strict": true,
+                        "locked": false,
+                        "lock_modified_time": 0,
+                        "scope": [
+                            "ANY"
+                        ],
+                        "is_default": false
+                    },
+                    "resource_type": "ChildSecurityPolicy",
+                    "marked_for_delete": false
+                },
+                {
+                    "SecurityPolicy": {
+                        "rules": [],
+                        "resource_type": "SecurityPolicy",
+                        "id": "override_security",
+                        "display_name": "Override - Security",
+                        "overridden": false,
+                        "sequence_number": 140,
+                        "internal_sequence_number": 1000140,
+                        "category": "Environment",
+                        "stateful": true,
+                        "tcp_strict": true,
+                        "locked": false,
+                        "lock_modified_time": 0,
+                        "scope": [
+                            "ANY"
+                        ],
+                        "is_default": false
+                    },
+                    "resource_type": "ChildSecurityPolicy",
+                    "marked_for_delete": false
+                },
+                {
+                    "SecurityPolicy": {
+                        "children": [
+                            {
+                                "Rule": {
+                                    "action": "DROP",
+                                    "resource_type": "Rule",
+                                    "id": "guardrail-sec-in-notsosecret",
+                                    "display_name": "IN - NotSoSecret",
+                                    "children": [],
+                                    "sequence_number": 10,
+                                    "sources_excluded": true,
+                                    "destinations_excluded": false,
+                                    "source_groups": [
+                                        "/infra/domains/default/groups/Sec---NotSoSecret"
+                                    ],
+                                    "destination_groups": [
+                                        "/infra/domains/default/groups/Sec---NotSoSecret"
+                                    ],
+                                    "services": [
+                                        "ANY"
+                                    ],
+                                    "profiles": [
+                                        "ANY"
+                                    ],
+                                    "logged": false,
+                                    "scope": [
+                                        "/infra/domains/default/groups/Sec---NotSoSecret"
+                                    ],
+                                    "disabled": false,
+                                    "notes": "",
+                                    "direction": "IN",
+                                    "tag": "",
+                                    "ip_protocol": "IPV4_IPV6",
+                                    "is_default": false
+                                },
+                                "resource_type": "ChildRule",
+                                "marked_for_delete": false
+                            },
+                            {
+                                "Rule": {
+                                    "action": "DROP",
+                                    "resource_type": "Rule",
+                                    "id": "guardrail-sec-in-secret",
+                                    "display_name": "IN - Secret",
+                                    "children": [],
+                                    "sequence_number": 20,
+                                    "sources_excluded": true,
+                                    "destinations_excluded": false,
+                                    "source_groups": [
+                                        "/infra/domains/default/groups/Sec---NotSoSecret",
+                                        "/infra/domains/default/groups/Sec---Secret"
+                                    ],
+                                    "destination_groups": [
+                                        "/infra/domains/default/groups/Sec---Secret"
+                                    ],
+                                    "services": [
+                                        "ANY"
+                                    ],
+                                    "profiles": [
+                                        "ANY"
+                                    ],
+                                    "logged": false,
+                                    "scope": [
+                                        "/infra/domains/default/groups/Sec---Secret"
+                                    ],
+                                    "disabled": false,
+                                    "notes": "",
+                                    "direction": "IN",
+                                    "tag": "",
+                                    "ip_protocol": "IPV4_IPV6",
+                                    "is_default": false
+                                },
+                                "resource_type": "ChildRule",
+                                "marked_for_delete": false
+                            },
+                            {
+                                "Rule": {
+                                    "action": "DROP",
+                                    "resource_type": "Rule",
+                                    "id": "guardrail-sec-in-topsecret",
+                                    "display_name": "IN - TopSecret",
+                                    "children": [],
+                                    "sequence_number": 30,
+                                    "sources_excluded": true,
+                                    "destinations_excluded": false,
+                                    "source_groups": [
+                                        "/infra/domains/default/groups/Sec---Secret",
+                                        "/infra/domains/default/groups/Sec---TopSecret"
+                                    ],
+                                    "destination_groups": [
+                                        "/infra/domains/default/groups/Sec---TopSecret"
+                                    ],
+                                    "services": [
+                                        "ANY"
+                                    ],
+                                    "profiles": [
+                                        "ANY"
+                                    ],
+                                    "logged": false,
+                                    "scope": [
+                                        "/infra/domains/default/groups/Sec---TopSecret"
+                                    ],
+                                    "disabled": false,
+                                    "notes": "",
+                                    "direction": "IN",
+                                    "tag": "",
+                                    "ip_protocol": "IPV4_IPV6",
+                                    "is_default": false
+                                },
+                                "resource_type": "ChildRule",
+                                "marked_for_delete": false
+                            }
+                        ],
+                        "resource_type": "SecurityPolicy",
+                        "id": "guardrails_in_security",
+                        "display_name": "Guardrails - IN - Security",
+                        "overridden": false,
+                        "sequence_number": 150,
+                        "internal_sequence_number": 1000150,
+                        "category": "Environment",
+                        "stateful": true,
+                        "tcp_strict": true,
+                        "locked": false,
+                        "lock_modified_time": 0,
+                        "scope": [
+                            "ANY"
+                        ],
+                        "is_default": false
+                    },
+                    "resource_type": "ChildSecurityPolicy",
+                    "marked_for_delete": false
+                },
+                {
+                    "SecurityPolicy": {
+                        "children": [
+                            {
+                                "Rule": {
+                                    "action": "DROP",
+                                    "resource_type": "Rule",
+                                    "id": "guardrail-sec-out-notsosecret",
+                                    "display_name": "OUT - NotSoSecret",
+                                    "children": [],
+                                    "sequence_number": 10,
+                                    "sources_excluded": false,
+                                    "destinations_excluded": true,
+                                    "source_groups": [
+                                        "/infra/domains/default/groups/Sec---NotSoSecret"
+                                    ],
+                                    "destination_groups": [
+                                        "/infra/domains/default/groups/Sec---NotSoSecret",
+                                        "/infra/domains/default/groups/Sec---Secret"
+                                    ],
+                                    "services": [
+                                        "ANY"
+                                    ],
+                                    "profiles": [
+                                        "ANY"
+                                    ],
+                                    "logged": false,
+                                    "scope": [
+                                        "/infra/domains/default/groups/Sec---NotSoSecret"
+                                    ],
+                                    "disabled": false,
+                                    "notes": "",
+                                    "direction": "OUT",
+                                    "tag": "",
+                                    "ip_protocol": "IPV4_IPV6",
+                                    "is_default": false
+                                },
+                                "resource_type": "ChildRule",
+                                "marked_for_delete": false
+                            },
+                            {
+                                "Rule": {
+                                    "action": "DROP",
+                                    "resource_type": "Rule",
+                                    "id": "guardrail-sec-out-secret",
+                                    "display_name": "OUT - Secret",
+                                    "children": [],
+                                    "sequence_number": 20,
+                                    "sources_excluded": false,
+                                    "destinations_excluded": true,
+                                    "source_groups": [
+                                        "/infra/domains/default/groups/Sec---Secret"
+                                    ],
+                                    "destination_groups": [
+                                        "/infra/domains/default/groups/Sec---Secret",
+                                        "/infra/domains/default/groups/Sec---TopSecret"
+                                    ],
+                                    "services": [
+                                        "ANY"
+                                    ],
+                                    "profiles": [
+                                        "ANY"
+                                    ],
+                                    "logged": false,
+                                    "scope": [
+                                        "/infra/domains/default/groups/Sec---Secret"
+                                    ],
+                                    "disabled": false,
+                                    "notes": "",
+                                    "direction": "OUT",
+                                    "tag": "",
+                                    "ip_protocol": "IPV4_IPV6",
+                                    "is_default": false
+                                },
+                                "resource_type": "ChildRule",
+                                "marked_for_delete": false
+                            },
+                            {
+                                "Rule": {
+                                    "action": "DROP",
+                                    "resource_type": "Rule",
+                                    "id": "guardrail-sec-out-topsecret",
+                                    "display_name": "OUT - TopSecret",
+                                    "children": [],
+                                    "sequence_number": 30,
+                                    "sources_excluded": false,
+                                    "destinations_excluded": true,
+                                    "source_groups": [
+                                        "/infra/domains/default/groups/Sec---TopSecret"
+                                    ],
+                                    "destination_groups": [
+                                        "/infra/domains/default/groups/Sec---TopSecret"
+                                    ],
+                                    "services": [
+                                        "ANY"
+                                    ],
+                                    "profiles": [
+                                        "ANY"
+                                    ],
+                                    "logged": false,
+                                    "scope": [
+                                        "/infra/domains/default/groups/Sec---TopSecret"
+                                    ],
+                                    "disabled": false,
+                                    "notes": "",
+                                    "direction": "OUT",
+                                    "tag": "",
+                                    "ip_protocol": "IPV4_IPV6",
+                                    "is_default": false
+                                },
+                                "resource_type": "ChildRule",
+                                "marked_for_delete": false
+                            }
+                        ],
+                        "resource_type": "SecurityPolicy",
+                        "id": "guardrails_out_security",
+                        "display_name": "Guardrails - OUT - Security",
+                        "overridden": false,
+                        "sequence_number": 160,
+                        "internal_sequence_number": 1000160,
+                        "category": "Environment",
+                        "stateful": true,
+                        "tcp_strict": true,
+                        "locked": false,
+                        "lock_modified_time": 0,
+                        "scope": [
+                            "ANY"
+                        ],
+                        "is_default": false
+                    },
+                    "resource_type": "ChildSecurityPolicy",
+                    "marked_for_delete": false
+                },
+                {
+                    "SecurityPolicy": {
+                        "children": [
+                            {
+                                "Rule": {
+                                    "action": "ALLOW",
+                                    "resource_type": "Rule",
+                                    "id": "spymaster-web-access",
+                                    "display_name": "SpyMaster Web Access",
+                                    "children": [],
+                                    "sequence_number": 10,
+                                    "sources_excluded": false,
+                                    "destinations_excluded": false,
+                                    "source_groups": [
+                                        "/infra/domains/default/groups/APP---YADFWMC"
+                                    ],
+                                    "destination_groups": [
+                                        "/infra/domains/default/groups/APP---SpyMaster"
+                                    ],
+                                    "services": [
+                                        "/infra/services/HTTPS",
+                                        "/infra/services/HTTP",
+                                        "/infra/services/ICMP_Echo_Request"
+                                    ],
+                                    "profiles": [
+                                        "ANY"
+                                    ],
+                                    "logged": true,
+                                    "scope": [
+                                        "/infra/domains/default/groups/APP---YADFWMC",
+                                        "/infra/domains/default/groups/APP---SpyMaster"
+                                    ],
+                                    "disabled": false,
+                                    "notes": "",
+                                    "direction": "IN_OUT",
+                                    "tag": "SpyMaster-Web-Access",
+                                    "ip_protocol": "IPV4_IPV6",
+                                    "is_default": false
+                                },
+                                "resource_type": "ChildRule",
+                                "marked_for_delete": false
+                            },
+                            {
+                                "Rule": {
+                                    "action": "ALLOW",
+                                    "resource_type": "Rule",
+                                    "id": "spymaster-internal",
+                                    "display_name": "SpyMaster-Internal",
+                                    "children": [],
+                                    "sequence_number": 20,
+                                    "sources_excluded": false,
+                                    "destinations_excluded": false,
+                                    "source_groups": [
+                                        "/infra/domains/default/groups/prod_NSS_SpyMaster"
+                                    ],
+                                    "destination_groups": [
+                                        "/infra/domains/default/groups/prod_NSS_SpyMaster"
+                                    ],
+                                    "services": [
+                                        "ANY"
+                                    ],
+                                    "profiles": [
+                                        "/infra/context-profiles/SSH"
+                                    ],
+                                    "logged": true,
+                                    "scope": [
+                                        "/infra/domains/default/groups/prod_NSS_SpyMaster"
+                                    ],
+                                    "disabled": false,
+                                    "notes": "INTERNAL-APP-COMMS",
+                                    "direction": "IN_OUT",
+                                    "tag": "",
+                                    "ip_protocol": "IPV4_IPV6",
+                                    "is_default": false
+                                },
+                                "resource_type": "ChildRule",
+                                "marked_for_delete": false
+                            },
+                            {
+                                "Rule": {
+                                    "action": "ALLOW",
+                                    "resource_type": "Rule",
+                                    "id": "batphone-comms",
+                                    "display_name": "Batphone Comms",
+                                    "children": [],
+                                    "sequence_number": 30,
+                                    "sources_excluded": false,
+                                    "destinations_excluded": false,
+                                    "source_groups": [
+                                        "/infra/domains/default/groups/APP---Batphone"
+                                    ],
+                                    "destination_groups": [
+                                        "/infra/domains/default/groups/APP---YADFWMC"
+                                    ],
+                                    "services": [
+                                        "ANY"
+                                    ],
+                                    "profiles": [
+                                        "/infra/context-profiles/SSH"
+                                    ],
+                                    "logged": true,
+                                    "scope": [
+                                        "/infra/domains/default/groups/APP---YADFWMC",
+                                        "/infra/domains/default/groups/APP---Batphone"
+                                    ],
+                                    "disabled": false,
+                                    "notes": "",
+                                    "direction": "IN_OUT",
+                                    "tag": "BatPhone-Comms",
+                                    "ip_protocol": "IPV4_IPV6",
+                                    "is_default": false
+                                },
+                                "resource_type": "ChildRule",
+                                "marked_for_delete": false
+                            }
+                        ],
+                        "resource_type": "SecurityPolicy",
+                        "id": "corporate_applications",
+                        "display_name": "Corporate Applications",
+                        "overridden": false,
+                        "sequence_number": 210,
+                        "internal_sequence_number": 1000210,
+                        "category": "Application",
+                        "stateful": true,
+                        "tcp_strict": true,
+                        "locked": false,
+                        "lock_modified_time": 0,
+                        "scope": [
+                            "ANY"
+                        ],
+                        "is_default": false
+                    },
+                    "resource_type": "ChildSecurityPolicy",
+                    "marked_for_delete": false
+                },
+                {
+                    "SecurityPolicy": {
+                        "children": [
+                            {
+                                "Rule": {
+                                    "action": "DROP",
+                                    "resource_type": "Rule",
+                                    "id": "silently-drop-dhcp",
+                                    "display_name": "DHCP",
+                                    "children": [],
+                                    "sequence_number": 10,
+                                    "sources_excluded": false,
+                                    "destinations_excluded": false,
+                                    "source_groups": [
+                                        "ANY"
+                                    ],
+                                    "destination_groups": [
+                                        "ANY"
+                                    ],
+                                    "services": [
+                                        "ANY"
+                                    ],
+                                    "profiles": [
+                                        "/infra/context-profiles/DHCP"
+                                    ],
+                                    "logged": false,
+                                    "scope": [
+                                        "ANY"
+                                    ],
+                                    "disabled": false,
+                                    "notes": "",
+                                    "direction": "IN_OUT",
+                                    "tag": "SILENTLY-DROP-DHCP",
+                                    "ip_protocol": "IPV4_IPV6",
+                                    "is_default": false
+                                },
+                                "resource_type": "ChildRule",
+                                "marked_for_delete": false
+                            },
+                            {
+                                "Rule": {
+                                    "action": "DROP",
+                                    "resource_type": "Rule",
+                                    "id": "silently-drop-igmp",
+                                    "display_name": "IGMP",
+                                    "sequence_number": 5,
+                                    "sources_excluded": false,
+                                    "destinations_excluded": false,
+                                    "source_groups": [
+                                        "ANY"
+                                    ],
+                                    "destination_groups": [
+                                        "ANY"
+                                    ],
+                                    "services": [
+                                        "/infra/services/IGMP_Membership_Query"
+                                    ],
+                                    "service_entries": [],
+                                    "profiles": [
+                                        "ANY"
+                                    ],
+                                    "logged": false,
+                                    "scope": [
+                                        "ANY"
+                                    ],
+                                    "disabled": false,
+                                    "notes": "",
+                                    "direction": "IN_OUT",
+                                    "tag": "SILENTLY-DROP-IGMP",
+                                    "ip_protocol": "IPV4_IPV6",
+                                    "is_default": false
+                                },
+                                "resource_type": "ChildRule",
+                                "marked_for_delete": false
+                            }
+                        ],
+                        "resource_type": "SecurityPolicy",
+                        "id": "log_supression",
+                        "display_name": "Log Suppression ",
+                        "overridden": false,
+                        "sequence_number": 220,
+                        "internal_sequence_number": 1000220,
+                        "category": "Application",
+                        "stateful": true,
+                        "tcp_strict": true,
+                        "locked": false,
+                        "lock_modified_time": 0,
+                        "scope": [
+                            "ANY"
+                        ],
+                        "is_default": false
+                    },
+                    "resource_type": "ChildSecurityPolicy",
+                    "marked_for_delete": false
+                },
+                {
+                    "SecurityPolicy": {
+                        "resource_type": "SecurityPolicy",
+                        "id": "default-layer3-section",
+                        "display_name": "Default Layer3 Section",
+                        "children": [
+                            {
+                                "Rule": {
+                                    "action": "DROP",
+                                    "resource_type": "Rule",
+                                    "id": "default-layer3-rule",
+                                    "display_name": "Default Layer3 Rule",
+                                    "children": [],
+                                    "marked_for_delete": false,
+                                    "overridden": false,
+                                    "sequence_number": 2147483647,
+                                    "sources_excluded": false,
+                                    "destinations_excluded": false,
+                                    "source_groups": [
+                                        "ANY"
+                                    ],
+                                    "destination_groups": [
+                                        "ANY"
+                                    ],
+                                    "services": [
+                                        "ANY"
+                                    ],
+                                    "profiles": [
+                                        "ANY"
+                                    ],
+                                    "logged": true,
+                                    "scope": [
+                                        "ANY"
+                                    ],
+                                    "disabled": false,
+                                    "direction": "IN_OUT",
+                                    "tag": "DEFAULT_DENY",
+                                    "ip_protocol": "IPV4_IPV6",
+                                    "is_default": true
+                                },
+                                "resource_type": "ChildRule",
+                                "marked_for_delete": false
+                            }
+                        ],
+                        "sequence_number": 14000000,
+                        "internal_sequence_number": 14000000,
+                        "category": "Application",
+                        "stateful": true,
+                        "tcp_strict": false,
+                        "locked": false,
+                        "lock_modified_time": 0,
+                        "scope": [
+                            "ANY"
+                        ],
+                        "is_default": true
+                    },
+                    "resource_type": "ChildSecurityPolicy",
+                    "marked_for_delete": false
+                }
+            ]
+        }
+    ],
+    "marked_for_delete": false,
+    "overridden": false,
+    "connectivity_strategy": "WHITELIST"
+}
